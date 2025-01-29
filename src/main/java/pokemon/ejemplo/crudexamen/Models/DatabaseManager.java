@@ -50,22 +50,24 @@ public class DatabaseManager {
 
     public static void actualizarSaldo(Granjero granjero){
         EntityManager manager = managerFactory.createEntityManager();
-
         manager.getTransaction().begin();
-
         manager.merge(granjero);
-
         manager.getTransaction().commit();
         manager.close();
     }
 
     public static void comprarAnimal(Granjero granjero){
         EntityManager manager = managerFactory.createEntityManager();
-
         manager.getTransaction().begin();
-
         manager.merge(granjero);
+        manager.getTransaction().commit();
+        manager.close();
+    }
 
+    public static void actualizarAnimal(Animal animal){
+        EntityManager manager = managerFactory.createEntityManager();
+        manager.getTransaction().begin();
+        manager.merge(animal);
         manager.getTransaction().commit();
         manager.close();
     }

@@ -166,7 +166,7 @@ public class Animal {
         this.cuidados = cuidados;
     }
 
-    public int getHorasTrabajo() {
+    public Integer getHorasTrabajo() {
         return horasTrabajo;
     }
 

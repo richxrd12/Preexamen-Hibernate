@@ -69,8 +69,26 @@ public class HomeController {
     }
 
     @FXML
-    void onClickUpdate(ActionEvent event) {
+    void onClickUpdate(ActionEvent event) throws IOException {
+        Animal animal = animalesVivosList.getSelectionModel().getSelectedItem();
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/pokemon/ejemplo/crudexamen/UpdateView.fxml"));
+
+        Scene scene = new Scene(loader.load());
+
+        UpdateController controller = loader.getController();
+        controller.setGranjero(granjero);
+        controller.setAnimal(animal);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+
+        stage.setTitle("Home");
+        stage.show();
+
+        stage.setHeight(610);
+        stage.setWidth(870);
     }
 
     public Granjero getGranjero() {
