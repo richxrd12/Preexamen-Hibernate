@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="676.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pokemon.ejemplo.crudexamen.Controllers.HomeController">
+   <children>
+      <ListView fx:id="animalesVivosList" layoutX="123.0" layoutY="167.0" prefHeight="342.0" prefWidth="200.0" />
+      <Label layoutX="184.0" layoutY="137.0" text="Animales vivos" />
+      <Button layoutX="339.0" layoutY="578.0" mnemonicParsing="false" onAction="#onClickSeeAnimal" text="Ver detalles" />
+      <Button layoutX="484.0" layoutY="578.0" mnemonicParsing="false" onAction="#onClickBuyAnimal" text="Comprar animales" />
+      <ListView fx:id="animalesMuertosList" layoutX="440.0" layoutY="167.0" prefHeight="342.0" prefWidth="200.0" />
+      <Label layoutX="491.0" layoutY="137.0" prefHeight="17.0" prefWidth="99.0" text="Animales muertos" />
+      <Button layoutX="171.0" layoutY="578.0" mnemonicParsing="false" onAction="#onClickUpdate" text="Modificar animal" />
+   </children>
+</AnchorPane>
